@@ -65,7 +65,7 @@ export const loginUserAccount = async (req, res) => {
        res.json(
            {
                message: `Invalid Credentials. Try Again ...... 😊 `,
-               status: responseStatus.unverified
+               status: 0
            }
        )
    }
@@ -75,7 +75,7 @@ export const loginUserAccount = async (req, res) => {
        res.status(responseStatus.success)
        res.json(
            {
-               status : responseStatus.success,
+               status : 1,
                message : "The user exists. Logging in...... 😊",
                data : userdata
                // data : {
